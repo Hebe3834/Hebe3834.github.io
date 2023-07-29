@@ -1,0 +1,15 @@
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin: auto;
+    max-width: 90%;
+    justify-content: center;
+    .craft {
+        
+        img {
+            max-width: 300px;
+            height: auto;
+        }
+    }
+}

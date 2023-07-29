@@ -1,0 +1,29 @@
+header {
+    display: flex;
+    flex-direction: row;
+    padding: 1em;
+    align-items: center;
+    font-size: 1.75em;
+
+    img {
+        height: 50px;
+        pointer-events: none;
+    }
+
+    .nav {
+        // width: max-content;
+        margin-left: auto;
+
+        a {
+            text-decoration: none;
+            color: ivory;
+            margin: 0 0.75em;
+            padding: 5px 0;
+            transition: border-bottom 0.15s linear;
+
+            &:hover {
+                border-bottom: 2px solid var(--purple);
+            }
+        }
+    }
+}
