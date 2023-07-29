@@ -6,7 +6,9 @@ import HB from '../assets/butterfly.png';
 const Header = () => {
     return (<>
         <header>
-            <img src={HB} alt="logo" />
+            <Link className="logo" to="/">
+                <img src={HB} alt="logo" />
+            </Link>
             <div className="nav">
                 <Link to="/">Home</Link>
                 <Link to="/Papercrafts">Papercrafts</Link>

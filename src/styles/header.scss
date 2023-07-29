@@ -4,8 +4,10 @@ header {
     padding: 1em;
     align-items: center;
     font-size: 1.75em;
+    max-width: 1600px;
+    margin: auto;
 
-    img {
+    .logo img {
         height: 50px;
         pointer-events: none;
     }

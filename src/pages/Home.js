@@ -6,7 +6,9 @@ import Footer from "./Footer";
 export default function Home() {
     return (<>
         <Header page="home"/>
-        <h2>home</h2>
+        <div className="content">
+            <h2>home</h2>
+        </div>
         <Footer/>
     </>);
 }
