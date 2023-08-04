@@ -8,7 +8,7 @@ import { initializeApp } from 'firebase/app';
 // https://firebase.google.com/docs/web/setup#available-libraries
 import 'firebase/compat/firestore'
 import { getStorage } from "firebase/storage";
-import { getFirestore } from 'firebase/firestore/lite';
+import { getFirestore, collection, getDocs } from 'firebase/firestore';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -21,6 +21,28 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+initializeApp(firebaseConfig);
 
-export const storage = getStorage(); 
+// initialize services
+const db = getFirestore();
+
+// collection ref
+const colRef = collection(db, "papercrafts");
+
+// get collection data
+const crafts = [];
+// getDocs(colRef) //promise
+//   .then((snapshot) => {
+//     // let crafts = [];
+//     snapshot.docs.forEach((doc) => {
+//       crafts.push({...doc.data(), id: doc.id })
+//     })
+//     console.log(crafts);
+//   })
+//   .catch(err => {
+//     console.log(err.message);
+//   });
+
+const storage = getStorage(); 
+
+export {storage, crafts};

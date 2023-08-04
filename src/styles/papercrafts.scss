@@ -1,3 +1,42 @@
+.cells {
+    padding-top: 5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 3em;
+    p {
+        text-align: right;
+        display: flex;
+        justify-content: flex-end;
+        flex-basis: 200px;
+        flex-grow: 1;
+        margin-left: 2em;
+        font-size: 1.1em;
+    }
+}
+
+.tags {
+    display: flex;
+    gap: 1em;
+    margin: 3em 0;
+    button {
+        font-size: 1.5em;
+        text-decoration: none;
+        background: none;
+        border: 2px solid ivory;
+        border-radius: 99px;
+        color: ivory;
+        padding: 0.25em 1em;
+        cursor: pointer;
+        transition: background-color 0.15s linear, color 0.15s linear;
+        &:hover {
+            background-color: ivory;
+            color: var(--black);
+        }
+    }
+}
+
 .gallery {
     display: flex;
     flex-wrap: wrap;
@@ -10,10 +49,15 @@
         height: min-content;
         position: relative;
         overflow: hidden;
+        display: flex;
+        flex-basis: 300px;
+        flex-grow: 1;
+        aspect-ratio: 1 / 1;
         background: var(--purple);
         
         img {
-            width: 300px;
+            object-fit: cover;
+            width: 100%
         }
         .filter {
             width: 100%;
@@ -45,6 +89,7 @@
                 position: absolute;
                 right: -0.5em;
                 bottom: 0.5em;
+                text-align: right;
                 transition: opacity 0.15s linear, right 0.15s linear;
             }
         }
