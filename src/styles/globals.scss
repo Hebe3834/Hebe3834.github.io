@@ -3,6 +3,7 @@
 
 :root {
     --black: #2D2C2F;
+    --clear-black: rgba(45, 44, 47, 0.75);
     --purple: #decaff;
     --darkpurple: rgb(20, 0, 58);
     // white as 'ivory'
@@ -22,12 +23,12 @@ body {
 
 .content {
     width: 1600px;
-    max-width: 95vw;
+    max-width: 90vw;
     margin: auto;
 }
 
 h1 {
-    font-size: 5em;
+    font-size: 3em;
     font-family: 'Merriweather', serif;
     width: max-content;
     margin-right: 0;

@@ -8,7 +8,7 @@
             align-items: center;
             justify-content: space-between;
             flex-wrap: wrap;
-            margin-bottom: 3em;
+            margin-bottom: 1em;
             p {
                 text-align: right;
                 display: flex;
@@ -16,16 +16,16 @@
                 flex-basis: 300px;
                 flex-grow: 1;
                 margin-left: 2em;
-                font-size: 1.5em;
+                font-size: 0.8em;
             }
         }
 
         .tags {
             display: flex;
             gap: 1em;
-            margin: 3em 0;
+            margin: 1em 0;
             button {
-                font-size: 1.5em;
+                font-size: 1em;
                 text-decoration: none;
                 background: none;
                 border: 2px solid ivory;
@@ -54,9 +54,9 @@
                 position: relative;
                 overflow: hidden;
                 display: flex;
-                flex-basis: 300px;
+                flex-basis: 250px;
                 flex-grow: 1;
-                max-width: 500px;
+                max-width: 300px;
                 aspect-ratio: 1 / 1;
                 background: var(--purple);
                 

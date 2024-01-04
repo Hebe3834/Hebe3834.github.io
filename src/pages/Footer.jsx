@@ -77,12 +77,15 @@ const Footer = (props) => {
             <div className="links">
               <a href="https://github.com/Hebe3834">
                 <i className="fa-brands fa-github"></i>
+                Github
               </a>
               <a href="https://www.linkedin.com/in/hebe-huang/">
                 <i className="fa-brands fa-linkedin"></i>{" "}
+                Linkedin
               </a>
               <a href="mailto:hebeluna00@gmail.com">
                 <i className="fa-solid fa-envelope"></i>{" "}
+                Email
               </a>
             </div>
           </div>

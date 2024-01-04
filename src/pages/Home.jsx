@@ -28,8 +28,8 @@ export default function Home() {
           </div>
           <p>
             I study Computer Science at the Georgia Institute of Technology. I'm
-            interested in software development, visual design, and building
-            bridges between creativity and functionality. Welcome to my page!
+            interested in software development, visual design, and the
+            intersection between the two. Welcome to my page!
           </p>
 
           <h3>
@@ -41,14 +41,14 @@ export default function Home() {
           <div className="activity">
             <h2>Code</h2>
             <Link to="/coding-projects" className="link">
-              &gt; cd coding-projects
+              &gt; cd .\coding-projects\
             </Link>
           </div>
 
           <div className="activity">
             <h2>Craft</h2>
             <Link to="/papercrafts" className="link">
-              &gt; cd coding-projects
+              &gt; cd .\papercrafts\
             </Link>
           </div>
 

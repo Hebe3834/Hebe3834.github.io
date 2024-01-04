@@ -3,13 +3,13 @@
     padding-bottom: 3em;
 
     .content {
-        font-size: 2em;
+        font-size: 1em;
 
         .row {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            align-items: center;
+            // align-items: center;
             flex-wrap: wrap;
             border-top: 2px solid ivory;
             padding: 1.5em 0;
@@ -52,11 +52,16 @@
 
             .links {
                 display: flex;
-                flex-direction: row;
+                flex-direction: column;
                 gap: 1em;
+                padding-right: 1em;
                 a {
-                    text-decoration: none;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 0.5em;
                     color: var(--white);
+                    text-decoration: none;
                     i {
                         font-size: 1.5em;
                         text-decoration: none;

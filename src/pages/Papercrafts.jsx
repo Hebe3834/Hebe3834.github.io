@@ -90,12 +90,12 @@ const Papercrafts = () => {
         <div className="content">
           <div className="cells">
             <h1>Papercrafts</h1>
-            <p>
+            {/* <p>
               I take 2d printed templates and assemble them into 3d models
               <br />
               Materials: X-Acto knife, cutting board, toothpick, liquid glue,
               tweezers
-            </p>
+            </p> */}
           </div>
           <div className="tags">
             <button>All</button>
