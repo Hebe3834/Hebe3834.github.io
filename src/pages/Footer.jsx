@@ -8,7 +8,7 @@ const Footer = (props) => {
       <div className="Footer">
         <div className="content">
           <div className="row">
-            {props.page === "home" ? (
+            {props.page === "about" ? (
               <div className="col">
                 <p>
                   C:\Users\
@@ -21,14 +21,14 @@ const Footer = (props) => {
                 </p>
 
                 <p className="directories">
-                  <Link to={"/coding-projects"} className="nav">
-                    coding-projects
+                  <Link to={"/work"} className="nav">
+                    work
                   </Link>
-                  <Link to={"/papercrafts"} className="nav">
-                    papercrafts
+                  <Link to={"/crafts"} className="nav">
+                    crafts
                   </Link>
-                  <Link to={"/about"} className="nav">
-                    about
+                  <Link to={"/contact"} className="nav">
+                    contact
                   </Link>
                 </p>
               </div>
@@ -61,14 +61,14 @@ const Footer = (props) => {
                 </p>
 
                 <p className="directories">
-                  <Link to={"/coding-projects"} className="nav">
-                    coding-projects
+                  <Link to={"/work"} className="nav">
+                    work
                   </Link>
-                  <Link to={"/papercrafts"} className="nav">
-                    papercrafts
+                  <Link to={"/crafts"} className="nav">
+                    crafts
                   </Link>
-                  <Link to={"/about"} className="nav">
-                    about
+                  <Link to={"/contact"} className="nav">
+                    contact
                   </Link>
                 </p>
               </div>

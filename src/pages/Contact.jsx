@@ -1,20 +1,20 @@
-import "../styles/codingprojects.scss";
+import "../styles/contact.scss";
 import "../styles/globals.scss";
 import Header from "./Header";
 import Footer from "./Footer";
 
-const CodingProjects = () => {
+const Contact = () => {
   return (
     <>
-      <Header page="coding-projects" />
-      <div className="CodingProjects">
+      <Header page="contact" />
+      <div className="Contact">
         <div className="content">
           <h2>Coming soon :&#41;</h2>
         </div>
       </div>
-      <Footer page="coding-projects" />
+      <Footer page="contact" />
     </>
   );
 };
 
-export default CodingProjects;
+export default Contact;

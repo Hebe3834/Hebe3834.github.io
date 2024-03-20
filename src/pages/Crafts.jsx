@@ -1,4 +1,4 @@
-import "../styles/papercrafts.scss";
+import "../styles/crafts.scss";
 import "../styles/globals.scss";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -27,7 +27,7 @@ initializeApp(firebaseConfig);
 // initialize services
 const db = getFirestore();
 
-const Papercrafts = () => {
+const Crafts = () => {
   const [crafts, setCrafts] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -55,8 +55,8 @@ const Papercrafts = () => {
   if (loading) {
     return (
       <>
-        <Header page="papercrafts" />
-        <div className="Papercrafts">
+        <Header page="crafts" />
+        <div className="Crafts">
           <div className="content">
             <div className="cells">
               <h1>Papercrafts</h1>
@@ -78,15 +78,15 @@ const Papercrafts = () => {
             </div>
           </div>
         </div>
-        <Footer page="papercrafts" />
+        <Footer page="crafts" />
       </>
     );
   }
 
   return (
     <>
-      <Header page="papercrafts" />
-      <div className="Papercrafts">
+      <Header page="crafts" />
+      <div className="Crafts">
         <div className="content">
           <div className="cells">
             <h1>Papercrafts</h1>
@@ -118,9 +118,9 @@ const Papercrafts = () => {
           </div>
         </div>
       </div>
-      <Footer page="papercrafts" />
+      <Footer page="crafts" />
     </>
   );
 };
 
-export default Papercrafts;
+export default Crafts;

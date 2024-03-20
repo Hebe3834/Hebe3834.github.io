@@ -30,55 +30,52 @@ const Header = (props) => {
     showNav ? "fa-angle-left" : "fa-angle-right"
   );
 
-  const headerClass = (showNav || scrollPosition < 100) ? "darkBackground" : "";
+  const headerClass = ((showNav || scrollPosition < 100) && scrollPosition > 75) ? "fullBackground" : "";
+  const logoClass = (showNav || scrollPosition < 100) ? "" : " croppedBackground";
 
   return (
     <>
       <header className={headerClass}>
-        <div className="logo"  onClick={handleToggleNav}>
-          <img src={HB} alt="logo" />
-        </div>
-        <div className="nav-container">
-          <div className={"nav " + navClass}>
-            <Link
-              to="/"
-              style={{
-                borderBottom:
-                  props.page === "home" ? "2px solid var(--purple)" : "",
-              }}
-            >
-              Home
-            </Link>
-            <Link
-              to="/coding-projects"
-              style={{
-                borderBottom:
-                  props.page === "coding-projects"
-                    ? "2px solid var(--purple)"
-                    : "",
-              }}
-            >
-              Code
-            </Link>
-            <Link
-              to="/Papercrafts"
-              style={{
-                borderBottom:
-                  props.page === "papercrafts" ? "2px solid var(--purple)" : "",
-              }}
-            >
-              Papercrafts
-            </Link>
-            <Link
-              to="/About"
-              style={{
-                borderBottom:
-                  props.page === "about" ? "2px solid var(--purple)" : "",
-              }}
-            >
-              About Me
-            </Link>
-            <i className={"fa-solid " + arrowClass} onClick={handleToggleNav}></i>
+        <div className="content">
+          <div className={"logo" + logoClass}  onClick={handleToggleNav}>
+            <img src={HB} alt="logo" />
+          </div>
+          <div className="nav-container">
+            <div className={"nav " + navClass}>
+              <Link
+                to="/"
+                className={(
+                  props.page === "about" ? "link curr-page" : "link"
+                )}
+              >
+                about
+              </Link>
+              <Link
+                to="/work"
+                className={(
+                  props.page === "work" ? "link curr-page" : "link"
+                )}
+              >
+                work
+              </Link>
+              <Link
+                to="/crafts"
+                className={(
+                  props.page === "crafts" ? "link curr-page" : "link"
+                )}
+              >
+                crafts
+              </Link>
+              <Link
+                to="/contact"
+                className={(
+                  props.page === "contact" ? "link curr-page" : "link"
+                )}
+              >
+                contact
+              </Link>
+              <i className={"fa-solid " + arrowClass} onClick={handleToggleNav}></i>
+            </div>
           </div>
         </div>
       </header>
