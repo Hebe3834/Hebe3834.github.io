@@ -2,6 +2,7 @@ import "../styles/crafts.scss";
 import "../styles/globals.scss";
 import Header from "./Header";
 import Footer from "./Footer";
+import Background from "./Background";
 import { useState, useEffect } from "react";
 import { initializeApp } from "firebase/app";
 
@@ -52,40 +53,10 @@ const Crafts = () => {
     fetchImages();
   }, []);
 
-  if (loading) {
-    return (
-      <>
-        <Header page="crafts" />
-        <div className="Crafts">
-          <div className="content">
-            <div className="cells">
-              <h1>Papercrafts</h1>
-              <p>
-                I take 2d printed templates and assemble them into 3d models
-                <br />
-                Materials: X-Acto knife, cutting board, toothpick, liquid glue,
-                tweezers
-              </p>
-            </div>
-            <div className="tags">
-              <button>All</button>
-              <button>Animals</button>
-              <button>Games</button>
-              <button>Other</button>
-            </div>
-            <div className="gallery">
-              <h2>Loading...</h2>
-            </div>
-          </div>
-        </div>
-        <Footer page="crafts" />
-      </>
-    );
-  }
-
   return (
     <>
       <Header page="crafts" />
+      <Background />
       <div className="Crafts">
         <div className="content">
           <div className="cells">
@@ -104,17 +75,22 @@ const Crafts = () => {
             <button>Other</button>
           </div>
           <div className="gallery">
-            {crafts &&
-              crafts.map((craft, index) => {
-                return (
-                  <div className="craft" key={index}>
-                    <img src={craft.url} alt={craft.name} />
-                    <div className="filter">
-                      <div className="name">{craft.name}</div>
+            { (loading) ? 
+              <h2>Loading...</h2>
+             :             
+              (crafts &&
+                crafts.map((craft, index) => {
+                  return (
+                    <div className="craft" key={index}>
+                      <img src={craft.url} alt={craft.name} />
+                      <div className="filter">
+                        <div className="name">{craft.name}</div>
+                      </div>
                     </div>
-                  </div>
-                );
-              })}
+                  );
+                })
+              )
+            }
           </div>
         </div>
       </div>

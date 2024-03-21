@@ -1,0 +1,53 @@
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    @keyframes float0 {
+        0% {transform: translate(-20vw, -50vw)}
+        25% {transform: translate(-20vw, -50vw)}
+        50% {transform: translate(150vw, 70vh)}
+        75% {transform: translate(-50vw, 100vh)}
+        100% {transform: translate(50vw, -50vh)}
+    }
+    @keyframes float1 {
+        0% {transform: translate(120vw, 150vw)}
+        50% {transform: translate(-50vw, -150vh)}
+        100% {transform: translate(-50vw, 150vh)}
+    }
+    .blob0 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        animation-name: float0;
+        animation-duration: 30s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+    .blob1 {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        animation-name: float1;
+        animation-duration: 20s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+    .blur {
+        background-color: rgba(13, 14, 14, 0.20);;
+        backdrop-filter: blur(100px);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+    }
+    // background: linear-gradient(150deg, 
+    //     rgba(0, 0, 0, 0),  
+    //     rgba(100, 0, 58, 0.1), 
+    //     rgba(50, 0, 58, 0.5), 
+    //     var(--darkpurple), 
+    //     var(--darkpurple));
+}
