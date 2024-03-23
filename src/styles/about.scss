@@ -95,7 +95,8 @@
                 // color: rgba(0, 0, 0, 0);
                 -webkit-text-fill-color: rgba(0, 0, 0, 0);
                 -webkit-text-stroke: 1px var(--white);
-                opacity: 0.25;
+                opacity: 0.15;
+                user-select: none;
             }
             .work-desc {
                 display: flex;

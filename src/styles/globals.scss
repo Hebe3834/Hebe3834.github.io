@@ -6,6 +6,10 @@
     --purple: #DECAFF; // accent
     --jetblack: #2D2C2F; 
 
+    --blue: #CAFFF8; 
+    --green: #EBFFCA; 
+    --pink: #FFCAD0; 
+
     --clear-black: rgba(13, 14, 14, 0.80);
     --darkpurple: #6F6480; // 40% of the way to black from --purple
     --brightpurple: #BE97FF; // monochromatic
@@ -22,7 +26,8 @@ body {
     position: relative;
     background-color: var(--black);
     color: ivory;
-    font-family: var(--urban)
+    font-family: var(--urban);
+    color: var(--white);
 }
 
 .content {
@@ -42,6 +47,11 @@ h2 {
 }
 
 h3 {
+    font-size: 48px;
+    margin: 0;
+}
+
+h4 {
     font-size: 24px;
     font-weight: 400;
     margin: 0;
