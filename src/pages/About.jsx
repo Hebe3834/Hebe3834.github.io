@@ -28,17 +28,16 @@ export default function About() {
               </a>
             </div>
           </div>
-          <p>
-          I'm interested in designing and programming meaningful experiences.
-          </p>
-          <p>
-          Welcome to my page!
-          </p>
-          <div className="uni">
-            <i className="fa-solid fa-graduation-cap"></i>
-            <p>Currently studying CS @ Georgia Institute of Technology</p>
+          <div className="desc">
+            <p>
+              <span>I'm here to design and program meaningful experiences.</span>
+              <span>Welcome to my page!</span>
+            </p>
+            <div className="uni">
+              <i className="fa-solid fa-graduation-cap"></i>
+              <p>Currently studying CS @ Georgia Institute of Technology</p>
+            </div>
           </div>
-
 
           <div className="work-section">
             <div className="verbs0">

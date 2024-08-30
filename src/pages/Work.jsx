@@ -8,6 +8,7 @@ import RAFI from "../assets/rafi_mockup.png";
 import QUESTIFY from "../assets/questify.png";
 import QUARTO from "../assets/quarto.png";
 import IRIS from "../assets/project-iris.png";
+import CADMUS from "../assets/cadmus.png";
 
 const Work = () => {
   return (
@@ -50,6 +51,23 @@ const Work = () => {
           <div className="projects">
             <h2>Coding Projects</h2>
             <div className="project-grid">
+
+              <a className="project" href="https://www.cadmusanalytics.com/">
+                <div className="scale-box">
+                  <img src={CADMUS} alt="Project 3" />
+                </div>
+                <div className="overlayer">
+                  <div className="tags">
+                      <p className="lang">React</p>
+                      <p className="web">CSS</p>
+                  </div>
+                </div>
+                <div className="desc">
+                  <p>A <span>public facing site</span> that introduces an <span>EMS services</span> startup</p>
+                  <h3>Cadmus</h3>
+                </div>
+              </a>
+
               <a className="project" href="https://github.com/Hebe3834/Hebe3834.github.io">
                 <div className="scale-box">
                   <img src={PERSONAL} alt="Project 1" />
@@ -66,6 +84,7 @@ const Work = () => {
                   <h3>This Site</h3>
                 </div>
               </a>
+              
               <a className="project" href="https://github.com/Hebe3834/Quarto">
                 <div className="scale-box">
                   <img src={QUARTO} alt="Project 2" />
@@ -80,7 +99,7 @@ const Work = () => {
                   <h3>Quarto</h3>
                 </div>
               </a>
-              <a className="project" href="https://github.com/RoshaniS5/P4">
+              {/* <a className="project" href="https://github.com/RoshaniS5/P4">
                 <div className="scale-box">
                   <img src={IRIS} alt="Project 3" />
                 </div>
@@ -97,7 +116,7 @@ const Work = () => {
                   <p>An anonymous <span>web app</span> for posting custom hand-drawn drawn <span>messages</span></p>
                   <h3>Project Iris</h3>
                 </div>
-              </a>
+              </a> */}
             </div>
           </div>
 

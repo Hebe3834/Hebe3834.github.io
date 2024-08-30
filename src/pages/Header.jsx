@@ -36,7 +36,7 @@ const Header = (props) => {
   return (
     <>
       <header className={headerClass}>
-        <div className="content">
+        {/* <div className="content"> */}
           <div className={"logo" + logoClass}  onClick={handleToggleNav}>
             <img src={HB} alt="logo" />
           </div>
@@ -77,7 +77,7 @@ const Header = (props) => {
               <i className={"fa-solid " + arrowClass} onClick={handleToggleNav}></i>
             </div>
           </div>
-        </div>
+        {/* </div> */}
       </header>
     </>
   );

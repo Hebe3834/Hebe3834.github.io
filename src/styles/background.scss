@@ -8,14 +8,14 @@
     @keyframes float0 {
         0% {transform: translate(-20vw, -50vw)}
         25% {transform: translate(-20vw, -50vw)}
-        50% {transform: translate(150vw, 70vh)}
+        50% {transform: translate(130vw, 70vh)}
         75% {transform: translate(-50vw, 100vh)}
         100% {transform: translate(50vw, -50vh)}
     }
     @keyframes float1 {
-        0% {transform: translate(120vw, 150vw)}
-        50% {transform: translate(-50vw, -150vh)}
-        100% {transform: translate(-50vw, 150vh)}
+        0% {transform: translate(120vw, 130vw)}
+        50% {transform: translate(-50vw, -130vh)}
+        100% {transform: translate(-50vw, 130vh)}
     }
     .blob0 {
         position: absolute;
