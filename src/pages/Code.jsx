@@ -42,7 +42,7 @@ const Code = () => {
                 </div>
               </a>
               
-              <a className="design" href="https://sites.google.com/view/wraplify-portfolio/">
+              <a className="codeBtn" href="https://sites.google.com/view/wraplify-portfolio/">
                 <div className="scale-box">
                   <img src={WRAPLIFY} alt="Project 2" />
                   {/* <iframe src="c:\Users\hebe3\Downloads\LittleVenice.png" width="100%" height="100%" name="wraplify"/> */}
@@ -53,8 +53,10 @@ const Code = () => {
                     <p className="db">Firebase</p>
                   </div>
                 </div>
-                  <p>A <span>comprehensive Androdid app</span> displaying <span>Spotify listening history</span></p>
-                  <h3>Wraplify</h3>
+                  <div className="desc">
+                    <p>A <span>comprehensive Androdid app</span> displaying <span>Spotify listening history</span></p>
+                    <h3>Wraplify</h3>
+                  </div>
               </a>
 
 
