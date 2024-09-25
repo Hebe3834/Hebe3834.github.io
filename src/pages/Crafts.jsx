@@ -66,12 +66,12 @@ const Crafts = () => {
               tweezers
             </p> */}
           </div>
-          <div className="tags">
+          {/* <div className="tags">
             <button>All</button>
             <button>Animals</button>
             <button>Games</button>
             <button>Other</button>
-          </div>
+          </div> */}
           <div className="gallery">
             { (loading) ? 
               <h2>Loading...</h2>

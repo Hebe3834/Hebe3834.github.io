@@ -1,10 +1,15 @@
-import "../styles/code.scss";
+import "../styles/projects.scss";
+import "../styles/designs.scss";
+import "../styles/components/codebtn.scss";
 import "../styles/globals.scss";
 import Header from "./Header";
 import Footer from "./Footer";
 import PERSONAL from "../assets/personal-site.png";
 import QUARTO from "../assets/quarto.png";
 import CADMUS from "../assets/cadmus.png";
+import WRAPLIFY from "../assets/wraplify.png";
+import VENICE from "../assets/LittleVenice.png";
+import CodeBtn from "./components/CodeBtn";
 
 const Code = () => {
   return (
@@ -18,29 +23,15 @@ const Code = () => {
             <h2>Coding Projects</h2>
             <div className="project-grid">
 
-              <a className="project" href="https://www.cadmusanalytics.com/">
-                <div className="scale-box">
-                  <img src={CADMUS} alt="Project 3" />
-                </div>
-                <div className="overlayer">
-                  <div className="tags">
-                      <p className="lang">React</p>
-                      <p className="web">CSS</p>
-                  </div>
-                </div>
-                <div className="desc">
-                  <p>A <span>public facing site</span> that introduces an <span>EMS services</span> startup</p>
-                  <h3>Cadmus</h3>
-                </div>
-              </a>
+              <CodeBtn />
 
-              <a className="project" href="https://github.com/Hebe3834/Hebe3834.github.io">
+              <a className="codeBtn" href="https://github.com/Hebe3834/Hebe3834.github.io">
                 <div className="scale-box">
                   <img src={PERSONAL} alt="Project 1" />
                 </div>
                 <div className="overlayer">
                   <div className="tags">
-                    <p className="web">React</p>
+                    <p className="lang">React</p>
                     <p className="web">SCSS</p>
                     <p className="db">Firebase</p>
                   </div>
@@ -51,38 +42,37 @@ const Code = () => {
                 </div>
               </a>
               
-              <a className="project" href="https://github.com/Hebe3834/Quarto">
+              <a className="design" href="https://sites.google.com/view/wraplify-portfolio/">
                 <div className="scale-box">
-                  <img src={QUARTO} alt="Project 2" />
+                  <img src={WRAPLIFY} alt="Project 2" />
+                  {/* <iframe src="c:\Users\hebe3\Downloads\LittleVenice.png" width="100%" height="100%" name="wraplify"/> */}
                 </div>
                 <div className="overlayer">
                   <div className="tags">
-                    <p className="lang">Python</p>
+                    <p className="lang">Android Studio</p>
+                    <p className="db">Firebase</p>
+                  </div>
+                </div>
+                  <p>A <span>comprehensive Androdid app</span> displaying <span>Spotify listening history</span></p>
+                  <h3>Wraplify</h3>
+              </a>
+
+
+              <a className="codeBtn" href="https://littlevenicerestaurant.com/">
+                <div className="scale-box">
+                  <img src={VENICE} alt="Project 3" />
+                </div>
+                <div className="overlayer">
+                  <div className="tags">
+                    <p className="lang">React</p>
+                    <p className="lang">SASS</p>
                   </div>
                 </div>
                 <div className="desc">
-                  <p>A turn-based <span>puzzle game</span> played through the <span>terminal</span></p>
-                  <h3>Quarto</h3>
+                  <p>An <span>online face</span> for a <span>family owned business</span></p>
+                  <h3>Little Venice</h3>
                 </div>
               </a>
-              {/* <a className="project" href="https://github.com/RoshaniS5/P4">
-                <div className="scale-box">
-                  <img src={IRIS} alt="Project 3" />
-                </div>
-                <div className="overlayer">
-                  <div className="tags">
-                      <p className="lang">Python</p>
-                      <p className="web">Flask</p>
-                      <p className="web">HTML/CSS</p>
-                      <p className="web">JavaScript</p>
-                      <p className="db">SQLite</p>
-                  </div>
-                </div>
-                <div className="desc">
-                  <p>An anonymous <span>web app</span> for posting custom hand-drawn drawn <span>messages</span></p>
-                  <h3>Project Iris</h3>
-                </div>
-              </a> */}
 
 
 
