@@ -2,14 +2,12 @@ import "../styles/about.scss";
 import "../styles/globals.scss";
 import Header from "./Header";
 import Footer from "./Footer";
-import Background from "./Background";
 import { Link } from "react-router-dom";
 
 export default function About() {
   return (
     <>
       <Header page="about" />
-      <Background />
       <div className="About">
         <div className="content">
           <div className="cells">

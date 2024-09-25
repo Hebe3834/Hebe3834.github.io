@@ -1,8 +1,10 @@
 // import logo from './logo.svg';
-import Work from "./pages/Work";
+import About from "./pages/About";
+import Code from "./pages/Code";
+import Designs from "./pages/Designs";
 import Contact from "./pages/Contact";
 import Crafts from "./pages/Crafts";
-import About from "./pages/About";
+import Background from "./pages/Background";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -11,10 +13,12 @@ function App() {
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
       </header> */}
+      <Background />
       <Routes>
         <Route path="/" element={<About />} />
         <Route path="/crafts" element={<Crafts />} />
-        <Route path="/work" element={<Work />} />
+        <Route path="/designs" element={<Designs />} />
+        <Route path="/code" element={<Code />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </>

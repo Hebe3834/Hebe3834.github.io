@@ -21,8 +21,11 @@ const Footer = (props) => {
                 </p>
 
                 <p className="directories">
-                  <Link to={"/work"} className="nav">
-                    work
+                  <Link to={"/code"} className="nav">
+                    code
+                  </Link>
+                  <Link to={"/designs"} className="nav">
+                  designs
                   </Link>
                   <Link to={"/crafts"} className="nav">
                     crafts
@@ -61,13 +64,16 @@ const Footer = (props) => {
                 </p>
 
                 <p className="directories">
-                  <Link to={"/work"} className="nav">
-                    work
+                  <Link to={"/code"} className={props.page == "code" ? "nav curr-page" : "nav"}>
+                  code
                   </Link>
-                  <Link to={"/crafts"} className="nav">
+                  <Link to={"/designs"} className={props.page == "designs" ? "nav curr-page" : "nav"}>
+                  designs
+                  </Link>
+                  <Link to={"/crafts"} className={props.page == "crafts" ? "nav curr-page" : "nav"}>
                     crafts
                   </Link>
-                  <Link to={"/contact"} className="nav">
+                  <Link to={"/contact"} className={props.page == "contact" ? "nav curr-page" : "nav"}>
                     contact
                   </Link>
                 </p>

@@ -1,52 +1,18 @@
-import "../styles/work.scss";
+import "../styles/code.scss";
 import "../styles/globals.scss";
 import Header from "./Header";
 import Footer from "./Footer";
-import Background from "./Background";
 import PERSONAL from "../assets/personal-site.png";
-import RAFI from "../assets/rafi_mockup.png";
-import QUESTIFY from "../assets/questify.png";
 import QUARTO from "../assets/quarto.png";
-import IRIS from "../assets/project-iris.png";
 import CADMUS from "../assets/cadmus.png";
 
-const Work = () => {
+const Code = () => {
   return (
     <>
-      <Header page="work" />
-      <Background />
-      <div className="Work">
+      <Header page="code" />
+      <div className="Code">
         <div className="content">
 
-          <div className="designs">
-            <h2>Design Work</h2>
-            <div className="designs-grid">
-              <a className="design" href="https://github.com/Hebe3834/Hebe3834.github.io">
-                <div className="scale-box">
-                  <img src={PERSONAL} alt="Design 1" />
-                </div>
-                <div className="blur"></div>
-                <p>A <span>personal website</span> for a <span>student developer</span></p>
-                <h3>Personal Website</h3>
-              </a>
-              <a className="design" href="#">
-                <div className="scale-box">
-                  <img src={RAFI} alt="Design 2" />
-                </div>
-                <div className="blur"></div>
-                <p>An <span>online portfolio</span> for an <span>independent artist</span></p>
-                <h3>Rafi's Portfolio</h3>
-              </a>
-              <a className="design" href="#">
-                <div className="scale-box">
-                  <img src={QUESTIFY} alt="Design 3" />
-                </div>
-                <div className="blur"></div>
-                <p>A gamified <span>workout</span> and <span>fitness interface</span></p>
-                <h3>Questify</h3>
-              </a>
-            </div>
-          </div>
 
           <div className="projects">
             <h2>Coding Projects</h2>
@@ -117,14 +83,37 @@ const Work = () => {
                   <h3>Project Iris</h3>
                 </div>
               </a> */}
+
+
+
+
+
+
+              {/* 
+
+              personal site
+              wecracked frontend
+              gsu hackathon awards for llms *
+              let us cook *
+              spotify wrap app
+              empathy bytes website
+              quastify / solo leveling *
+              pantryaide *
+              2340 college scheduler (3 todo lists)
+              gt webdev project platform
+              red barn creative site 2 (ui given)
+              little venice  
+              cadmus ui
+              
+              */}
             </div>
           </div>
 
         </div>
       </div>
-      <Footer page="work" />
+      <Footer page="code" />
     </>
   );
 };
 
-export default Work;
+export default Code;

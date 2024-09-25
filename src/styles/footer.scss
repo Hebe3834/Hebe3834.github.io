@@ -44,9 +44,13 @@
                 color: var(--white);
                 transition: background-color 0.2s linear, color 0.2s linear;
                 
-                &:hover {
+                &:hover, &.curr-page {
                     background-color: ivory;
                     color: var(--black);
+                }
+
+                &.curr-page {
+                    pointer-events: none;
                 }
             }
 

@@ -38,7 +38,7 @@
                     background: linear-gradient(135deg, var(--white), var(--purple));
                     opacity: 0.75;
                     i {
-                        font-size: 2.5em;
+                        font-size: 2.25em;
                         text-decoration: none;
                         color: var(--black);
                     }
@@ -99,7 +99,7 @@
                 // color: rgba(0, 0, 0, 0);
                 -webkit-text-fill-color: rgba(0, 0, 0, 0);
                 -webkit-text-stroke: 1px var(--white);
-                opacity: 0.15;
+                opacity: 0.2;
                 user-select: none;
             }
             .work-desc {

@@ -10,6 +10,7 @@ const Header = (props) => {
 
   const handleToggleNav = () => {
     setShowNav(!showNav);
+    console.log(scrollPosition);
   };
 
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -30,13 +31,14 @@ const Header = (props) => {
     showNav ? "fa-angle-left" : "fa-angle-right"
   );
 
+  // const headerClass = ((showNav || scrollPosition < 75) && scrollPosition > 75) ? "fullBackground" : "";
   const headerClass = ((showNav || scrollPosition < 100) && scrollPosition > 75) ? "fullBackground" : "";
   const logoClass = (showNav || scrollPosition < 100) ? "" : " croppedBackground";
 
   return (
     <>
       <header className={headerClass}>
-        {/* <div className="content"> */}
+        <div className="content">
           <div className={"logo" + logoClass}  onClick={handleToggleNav}>
             <img src={HB} alt="logo" />
           </div>
@@ -51,12 +53,20 @@ const Header = (props) => {
                 about
               </Link>
               <Link
-                to="/work"
+                to="/code"
                 className={(
-                  props.page === "work" ? "link curr-page" : "link"
+                  props.page === "code" ? "link curr-page" : "link"
                 )}
               >
-                work
+                code
+              </Link>
+              <Link
+                to="/designs"
+                className={(
+                  props.page === "designs" ? "link curr-page" : "link"
+                )}
+              >
+                designs
               </Link>
               <Link
                 to="/crafts"
@@ -77,7 +87,7 @@ const Header = (props) => {
               <i className={"fa-solid " + arrowClass} onClick={handleToggleNav}></i>
             </div>
           </div>
-        {/* </div> */}
+        </div>
       </header>
     </>
   );

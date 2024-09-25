@@ -2,7 +2,6 @@ import "../styles/crafts.scss";
 import "../styles/globals.scss";
 import Header from "./Header";
 import Footer from "./Footer";
-import Background from "./Background";
 import { useState, useEffect } from "react";
 import { initializeApp } from "firebase/app";
 
@@ -56,7 +55,6 @@ const Crafts = () => {
   return (
     <>
       <Header page="crafts" />
-      <Background />
       <div className="Crafts">
         <div className="content">
           <div className="cells">
