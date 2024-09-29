@@ -1,25 +1,26 @@
+import "../../styles/projects.scss";
 import "../../styles/components/codebtn.scss";
 import "../../styles/globals.scss";
-import CADMUS from "../../assets/cadmus.png";
 
-
-const CodeBtn = () => {
+const CodeBtn = (props) => {
     return (
         <>
-            <a className="codeBtn" href="https://www.cadmusanalytics.com/">
+            <a className="project-link" href={props.link}>
                 <div className="scale-box">
-                    <img src={CADMUS} alt="Project 3" />
+                    <img src={props.img} alt={"Project " + props.id} />
                 </div>
-                <div className="overlayer">
+                <div className="blur"></div>
+
+                {/* <div className="overlayer">
                     <div className="tags">
                         <p className="lang">React</p>
                         <p className="web">CSS</p>
                     </div>
                 </div>
-                <div className="desc">
-                    <p>A <span>public facing site</span> that introduces an <span>EMS services</span> startup</p>
-                    <h3>Cadmus</h3>
-                </div>
+                <div className="desc"> */}
+                {props.desc}
+                <h3>{props.name}</h3>
+                {/* </div> */}
             </a>
         </>
     )
