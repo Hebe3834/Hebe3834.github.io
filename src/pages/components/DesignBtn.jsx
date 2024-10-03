@@ -7,7 +7,7 @@ const DesignBtn = (props) => {
         <>
             <a className="project-link" href={props.link}>
                 <div className="scale-box">
-                    <img src={props.img} alt={"Design " + props.id} />
+                    <img src={props.img} alt={"Design " + props.id} className={props.scroll ? "scroll" : ""}/>
                 </div>
                 <div className="blur"></div>
                 {props.desc}

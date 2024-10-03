@@ -88,6 +88,8 @@
                     }
                     .scale-box img {
                         transform: scale(1.1);
+                    }
+                    .scale-box img.scroll {
                         animation: scrollPage 10s .5s linear infinite;
                         @keyframes scrollPage {
                             0% {

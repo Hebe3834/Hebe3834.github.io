@@ -22,6 +22,7 @@ const Designs = () => {
                             name="This Site"
                             link="https://github.com/Hebe3834/Hebe3834.github.io"
                             img={PERSONAL}
+                            scroll={true}
                             desc={<p>A <span>personal website</span> for a <span>student developer</span></p>}
                         />
 
@@ -30,6 +31,7 @@ const Designs = () => {
                             name="Rafi's Portfolio"
                             link="#"
                             img={RAFI}
+                            scroll={false}
                             desc={<p>An <span>online portfolio</span> for an <span>independent artist</span></p>}
                         />
 
@@ -38,6 +40,7 @@ const Designs = () => {
                             name="Questify"
                             link="#"
                             img={QUESTIFY}
+                            scroll={false}
                             desc={<p>A gamified <span>workout</span> and <span>fitness interface</span></p>}
                         />
                     
