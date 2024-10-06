@@ -51,8 +51,11 @@ export default function About() {
             <div className="work-desc">
               <h4>I like designing websites <br/> as much as I like coding them</h4>
               <h4>Explore my portfolio!</h4>
-              <Link to="/work" className="link">
-                &gt; cd .\work\
+              <Link to="/code" className="link">
+                &gt; cd .\code\
+              </Link>
+              <Link to="/designs" className="link">
+                &gt; cd .\designs\
               </Link>
             </div>
           </div>

@@ -6,6 +6,7 @@ const CodeBtn = (props) => {
     return (
         <>
             <a className="codeBtn" href={props.link}>
+                <h3 className="title">{props.name}</h3>
                 <div className="scale-box">
                     <img src={props.img} alt={"Project " + props.id} />
                     <div className="tags">
