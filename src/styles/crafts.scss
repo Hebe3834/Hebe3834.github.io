@@ -1,9 +1,12 @@
 .Crafts {
-
+    padding-top: 7rem;
+    
     .content {
+        h1 {
+            font-size: 4rem;
+        }
 
         .cells {
-            padding-top: 5em;
             display: flex;
             align-items: center;
             justify-content: space-between;
