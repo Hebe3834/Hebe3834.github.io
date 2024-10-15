@@ -1,0 +1,160 @@
+.codeBtn {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 300px;
+    flex-grow: 1;
+    max-width: 800px;
+    position: relative;
+    padding-right: 2rem; // spacing for tags and desc
+    padding-bottom: 2rem; //spacing for desc
+
+    .title {
+        position: absolute;
+        font-size: 2rem;
+        top: -2.5rem;
+        color: var(--black);
+        text-shadow: 1px 1px var(--purple);
+        background-color: var(--white);
+        height: 2.5rem;
+        margin: 0.25rem auto;
+        // z-index: 9999;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: -2.48rem;
+            height: 0;
+            border-radius: 0;
+            width: 0px;
+            border-left: 2.5rem solid var(--white);
+            border-right: none;
+            border-top: 2.5rem solid transparent;
+        }
+    }
+
+    .scale-box {
+        width: 100%;
+        aspect-ratio: 5 / 3;
+        overflow: hidden;
+        margin-right: 10%;
+        border-radius: 8px;
+        border: 3px var(--white) solid;
+        // transition: border-width 0.2s ease-in, height 0.2s ease-in, width 0.2s ease-in;
+        transition-delay: 0.1s;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 4px ;
+            transform: scale(1);
+            transition: transform 0.3s ease-in;
+        }
+        .tags {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 0.5rem;
+            position: absolute;
+            top: 0.5rem;
+            right: -1.5rem;
+            // transform: translateX(50%);
+            gap: 0.5em;
+            flex-wrap: wrap;
+            width: max-content;
+            transition: transform 0.2s ease-in;
+            transition-delay: 0.1s;
+            p {
+                padding: 4px 12px;
+                background-color: var(--purple);
+                border-radius: 5px;
+                font-weight: 400;
+                margin: 0;
+                width: max-content;
+                color: var(--black);
+                border: 1px var(--white) solid; 
+                &.web {
+                    background-color: var(--blue);
+                }
+                &.lang {
+                    background-color: var(--pink);
+                }
+                &.db {
+                    background-color: var(--green);
+                }
+            }
+        }
+        
+    }
+    
+    .overlayer {
+        width: calc(90% - 2px);
+        height: calc(100% - 2px);
+        background-color: rgba(13, 14, 14, 0.20);;
+        border: 1px var(--white) solid;
+        border-radius: 4px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: border-width 0.2s ease-in, height 0.2s ease-in, width 0.2s ease-in;
+        transition-delay: 0.1s;
+        
+    }
+    .desc {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: max-content;
+        background-color: var(--purple);
+        color: var(--black);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 5rem;
+        max-width: 40%;
+        padding: 0.2em 0;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -1.98em;
+            height: calc(100% - 2em);
+            border-radius: 0;
+            width: 0px;
+            border-right: 2em solid var(--purple);
+            border-left: none;
+            border-bottom: 2em solid transparent;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: -1.98em;
+            height: calc(100% - 2em);
+            border-radius: 0;
+            width: 0px;
+            border-left: 2em solid var(--purple);
+            border-right: none;
+            border-top: 2em solid transparent;
+        }
+        
+        p {
+            margin: 1px;
+            span {
+                font-weight: 600;
+            }
+        }
+    }
+    &:hover {
+        backdrop-filter: none;
+        border-width: 7px;
+        width: calc(90% - 14px);
+        height: calc(100% - 14px);
+        // .tags {
+        //     // transform: translate(50%, 7px);
+        // }
+        .scale-box img {
+            transform: scale(1.1);
+        }
+    }
+    
+}

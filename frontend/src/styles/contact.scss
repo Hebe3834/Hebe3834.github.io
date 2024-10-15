@@ -1,0 +1,84 @@
+.Contact {
+    padding-top: 7em;
+    .content {
+        // padding-top: 10em;
+        display: flex;
+        flex-direction: column;
+        h1 {
+            width: max-content;
+            font-size: 4rem;
+        }
+        
+        .row {
+            display: flex;
+            flex-direction: row;
+            flex-grow: 1;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-basis: 500px;
+            flex-grow: 1;
+
+            .form {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                gap: 1.5rem;
+                margin: 2rem;
+
+                input, textarea {
+                    font-size: 1rem;
+                    padding: 10px 20px;
+                    outline: none;
+                    border-radius: 4px;
+                    background-color: transparent;
+                    caret-color: var(--purple);
+                    color: ivory;
+                    border: none;
+                    font-family: var(--urban);
+                    font-weight: 500;
+                    &:not(.submit-btn) {
+                        background-color: rgba(255, 255, 240, 0.2);
+                        border: 2px solid ivory;
+                        transition: border-color 0.15s linear, background-color 0.15s linear;
+                        &::placeholder {
+                            color: ivory;
+                            opacity: .5;
+                        }
+                        &:hover, &:focus {
+                            background-color: rgba(222, 202, 255, 0.25);
+                            border-color: var(--purple);
+                        }
+                    }
+                    &.msg {
+                        min-height: 5rem;
+                        resize: vertical;
+                    }
+                    &.submit-btn {
+                        background-color: var(--purple);
+                        color: var(--black);
+                    }
+                }
+                
+                .submit-container {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.5rem;
+                    width: 100%;
+                }
+
+                p.success-msg {
+                    height: 1rem;
+                    font-size: 1rem;
+                    margin: 0;
+                }
+            }
+        }
+        .graphic {
+            flex-basis: 500px;
+            flex-grow: 1;
+        }
+    }
+    
+}

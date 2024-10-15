@@ -1,0 +1,78 @@
+.Footer {
+    padding-top: 10em;
+    padding-bottom: 3em;
+
+    .content {
+        font-size: 1em;
+
+        .row {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            // align-items: center;
+            flex-wrap: wrap;
+            border-top: 2px solid ivory;
+            padding: 1.5em 0;
+            gap: 2em;
+
+            .col {
+                display: flex;
+                flex-direction: column;
+                gap: 0.25em;
+                border: 1px solid ivory;
+                border-radius: 5px;
+                flex-basis: 775px;
+                flex-grow: 1;
+                padding: 0.25em;
+                padding-bottom: 2.5em;
+
+                p {
+                    width: max-content;
+                    margin: 0;
+                    font-family: var(--code);
+                    &.directories {
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        gap: 1em;
+                        padding-left: 1em;
+                    }
+                }
+            }
+
+            .nav {
+                color: var(--white);
+                transition: background-color 0.2s linear, color 0.2s linear;
+                
+                &:hover, &.curr-page {
+                    background-color: ivory;
+                    color: var(--black);
+                }
+
+                &.curr-page {
+                    pointer-events: none;
+                }
+            }
+
+            .links {
+                display: flex;
+                flex-direction: column;
+                gap: 1em;
+                padding-right: 1em;
+                a {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 0.5em;
+                    color: var(--white);
+                    text-decoration: none;
+                    i {
+                        font-size: 1.5em;
+                        text-decoration: none;
+                        color: var(--white);
+                    }
+                }
+            }
+        }
+    }
+}
