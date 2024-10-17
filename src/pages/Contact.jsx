@@ -5,40 +5,59 @@ import Footer from "./Footer";
 import { useState } from "react";
 
 const Contact = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [msg, setMsg] = useState('');
+  const [success, setSuccess] = useState('');
+  const [sending, setSending] = useState(false);
 
   const validateInputs = (dict) => {
     let emailTest = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     if (!dict.name || !dict.message || !dict.email) {
-        return "please check that everything was filled out";
+      return "ERR_INCOMPLETE";
+        // return "please check that everything was filled out";
     } else if (!emailTest.test(dict.email)) {
-      console.log(dict.email);
-      return "please check that you entered a valid email";
+      return "ERR_EMAIL";
+      // return "please check that you entered a valid email";
     }
     return ""; // no error msg
   }
 
   const handleSubmit = async (e) => {
     e.preventDefault(); // prevents default upon submitting
+    setSending(true);
+    const formData = new FormData(e.target);
 
     var dict = {
-      name: name,
-      email: email,
-      message: msg
+      name: formData.get("name"),
+      email: formData.get("email"),
+      message: formData.get("message")
     }
     console.log(dict);
     var errorMsg = validateInputs(dict);
-    if (errorMsg) {
-        console.log("Error - Failed to Add Form");
-        document.getElementById("successMsg").innerText = "Failed to send message :( " + errorMsg;
-        document.getElementById("successMsg").style.color = "var(--pink)";
-        return;
+    if (errorMsg === "ERR_INCOMPLETE") {
+      console.log("Error - Incomplete Form");
+      setSuccess("Failed to send message :( Please check that everything was filled out");
+      setSending(false);
+      return;
+    } else if (errorMsg === "ERR_EMAIL") {
+      console.log("Error - Invalid Email");
+      setSuccess("Failed to send message :( Please check that you entered a valid email");
+      setSending(false);
+      return;
+    }
+
+    formData.append("access_key", "4007ecf0-c98d-4e7e-92b3-61b11426be98");
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+    const data = await response.json();
+    if (data.success) {
+      setSuccess("Message recieved! Nice to meet you :>");
+      e.target.reset();
+      setSending(false);
     } else {
-        console.log("Form Successfully Added (fake)");
-        document.getElementById("successMsg").innerText = "Message recieved! Nice to meet you :>"
-        document.getElementById("successMsg").style.color = "var(--green)";    }
+      console.log("Error: " + data);
+      setSuccess("Failed to send message :( Please contact me through links in the footer")
+    }
     
   }
 
@@ -50,38 +69,36 @@ const Contact = () => {
           <h1>Let's Talk :)</h1>
           <div className="row">
             <div className="contact-form">
-              <form className="form" id="form">
+              <form className="form" id="form" onSubmit={handleSubmit}>
+                <input type="hidden" name="subject" value="Hebe3834.github.io Contact Submission !!" />
                 <input 
                 className="name" 
+                name="name"
                 id="name" 
                 placeholder="name"
-                pattern="[A-Za-z]"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
+                // pattern="[A-Za-z]"
+                // value={name}
+                // onChange={(e) => setName(e.target.value)}
                 />
                 <input 
                 className="email" 
+                name="email"
                 id="email" 
                 placeholder="email"
-                pattern="[A-Za-z]"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
                 />
                 <textarea 
                 className="msg" 
+                name="message"
                 id="msg" 
                 placeholder="message"
-                pattern="[A-Za-z]"
-                value={msg}
-                onChange={(e) => setMsg(e.target.value)}
                 />
                 <div className="submit-container">
-                  <p className="success-msg" id="successMsg"></p>
+                  <p className="success-msg" id="successMsg">{success}</p>
                   <input 
                     type="submit" 
                     className="submit-btn" 
-                    onClick={handleSubmit}
                     id="submitBtn"
+                    value={sending ? "Sending..." : "Send Message!"}
                   />  
                 </div>
                 
