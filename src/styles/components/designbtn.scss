@@ -1,0 +1,105 @@
+.design-btn {
+    display: flex;
+    flex-basis: 300px;
+    flex-grow: 1;
+    max-width: 800px;
+    position: relative;
+    .scale-box {
+        width: 100%;
+        aspect-ratio: 5 / 3;
+        overflow: hidden;
+        box-shadow: 0 0 7px 0 var(--white);
+        border-radius: 4px;
+        
+        img {
+            width: 100%;
+            height: auto;
+            // object-fit: contain;
+            transform: scale(1.1);
+            transition: transform 0.3s ease-in;
+        }
+    }
+    .blur {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(13, 14, 14, 0.7);;
+        backdrop-filter: blur(8px);
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 4px;
+        transition: backdrop-filter 0.2s ease-in background-color 0.2s linear;
+        transition-delay: 0.1s;
+    }
+    p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 20px;
+        font-weight: 700;
+        text-align: center;
+        display: block;
+        margin: 0;
+        opacity: 1;
+        transition: opacity 0.3s ease-in;
+        color: var(--white);
+        span {
+            color: var(--purple);
+        }       
+    }
+    h3 {
+        position: absolute;
+        top: -0.75em;
+        left: 0;      
+        color: var(--purple);
+        height: 0em;
+        padding-left: 5px;
+        text-shadow: 1px 2px 1px var(--white);
+        overflow: hidden;
+        transition: height 0.3s ease-in;
+    }
+    &:hover {
+        .blur {
+            backdrop-filter: none;
+            background: linear-gradient(-180deg, 
+            var(--black),
+            rgba(0, 0, 0, 0),  
+            rgba(0, 0, 0, 0),  
+            rgba(0, 0, 0, 0));
+        }
+        .scale-box img {
+            transform: scale(1.1);
+        }
+        .scale-box img.scroll {
+            animation: scrollPage 10s .5s linear infinite;
+            @keyframes scrollPage {
+                0% {
+                    filter: brightness(100%);
+                }
+                3% {
+                    transform: translateY(0);
+                }
+                90% {
+                    transform: translateY(-350px);
+                }
+                97% {
+                    filter: brightness(100%);
+                }
+                100% {
+                    transform: translateY(-350px);
+                    filter: brightness(0%);
+                }
+            }
+        }
+        p {
+            opacity: 0;
+        }
+        h3 {
+            height: 2em;
+        }
+        .scale-box img {
+            transform: scale(1);
+        }
+    }
+}

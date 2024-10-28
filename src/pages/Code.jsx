@@ -1,5 +1,4 @@
 import "../styles/projects.scss";
-import "../styles/components/codebtn.scss";
 import "../styles/globals.scss";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -8,9 +7,11 @@ import QUARTO from "../assets/quarto.png";
 import CADMUS from "../assets/cadmus.png";
 import WRAPLIFY from "../assets/wraplify.png";
 import VENICE from "../assets/LittleVenice.png";
+import CREATIVE from "../assets/webpages/creative-site-home.png";
 import CodeBtn from "./components/CodeBtn";
+import { useNavigate } from 'react-router-dom';
 
-const Code = () => {
+const Code = () => {  
   return (
     <>
       <Header page="code" />
@@ -23,18 +24,21 @@ const Code = () => {
             <CodeBtn 
               id="1" 
               name="CADMUS"
-              link="https://www.cadmusanalytics.com/"
+              link="/code/cadmus"
               img={CADMUS}
-              desc={<p>A <span>public facing site</span> that represents an <span>EMS services startup</span></p>}
+              scroll={true}
+              desc={<p>A <span>public facing site</span> to represent an <span>EMS services startup</span></p>}
+              tags={["React", "CSS"]}
             />
 
-            <CodeBtn 
+            {/* <CodeBtn 
               id="2" 
               name="This Site"
               link="https://github.com/Hebe3834/Hebe3834.github.io"
               img={PERSONAL}
+              scroll={true}
               desc={<p>A <span>personal website</span> for a <span>student developer</span></p>}
-            />
+            /> */}
             {/* <div className="tags">
                   <p className="lang">React</p>
                   <p className="web">SCSS</p>
@@ -42,11 +46,13 @@ const Code = () => {
                 </div> */}
 
             <CodeBtn 
-              id="3" 
+              id="2" 
               name="Wraplify"
               link="https://sites.google.com/view/wraplify-portfolio/"
               img={WRAPLIFY}
+              scroll={true}
               desc={<p>An <span> Androdid app</span> that presents <span>listening insights</span> from <span>Spotify</span></p>}
+              tags={["Android\nStudio", "Spotify API"]}
             />
             {/* <div className="tags">
                   <p className="lang">Android Studio</p>
@@ -54,16 +60,28 @@ const Code = () => {
                 </div> */}
 
             <CodeBtn 
-              id="4" 
+              id="3" 
               name="Little Venice"
               link="https://littlevenicerestaurant.com/"
               img={VENICE}
-              desc={<p>An <span>online face</span> for a <span>family owned business</span></p>}
+              scroll={true}
+              desc={<p>An <span>online face</span> for a <span>family owned restaurant</span></p>}
+              tags={["React", "SCSS"]}
             />
             {/* <div className="tags">
                   <p className="lang">React</p>
                   <p className="lang">SASS</p>
                 </div> */}
+
+            <CodeBtn 
+              id="4" 
+              name="Creative Team Site"
+              link="/code/creative-team"
+              img={CREATIVE}
+              scroll={true}
+              desc={<p>A <span>public facing site</span> for a <span>printing and apparel business</span></p>}
+              tags={["React", "SCSS"]}
+            />
 
             
 

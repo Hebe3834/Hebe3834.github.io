@@ -74,7 +74,6 @@ export default function About() {
             </Link>
           </div> */}
 
-          <h2>Work in progress...</h2>
         </div>
       </div>
       <Footer page="about" />

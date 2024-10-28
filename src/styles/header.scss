@@ -8,8 +8,8 @@ header {
     width: 100%;
     align-items: center;
     position: fixed;
-    left: 50%;
-    transform: translate(calc(-50% - 5px), 0);
+    left: 50% - 0.5;
+    transform: translate(calc(-50% - 5px - 0.5rem), 0);
     transition: background-color 0.3s linear;
     z-index: 99;
 
@@ -28,7 +28,7 @@ header {
     .logo {
         cursor: pointer;
         border-radius: 0 0px 12px 12px;
-        padding: 2em .5em 1em .5em;
+        padding: 2rem .5rem 1rem .5rem;
         margin-left: 5vw;
 
         img {

@@ -70,6 +70,7 @@ const Contact = () => {
           <div className="row">
             <div className="contact-form">
               <form className="form" id="form" onSubmit={handleSubmit}>
+                <p>Feel free to reach out about my work, possible collaborations, or just life in general! </p>
                 <input type="hidden" name="subject" value="Hebe3834.github.io Contact Submission !!" />
                 <input 
                 className="name" 

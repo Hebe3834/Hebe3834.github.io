@@ -6,6 +6,7 @@ import Contact from "./pages/Contact";
 import Crafts from "./pages/Crafts";
 import Background from "./pages/Background";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Cadmus from "./pages/code/Cadmus";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/crafts" element={<Crafts />} />
         <Route path="/designs" element={<Designs />} />
         <Route path="/code" element={<Code />} />
+        <Route path="/code/cadmus" element={<Cadmus />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </>

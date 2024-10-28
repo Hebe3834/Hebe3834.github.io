@@ -11,24 +11,26 @@
     .title {
         position: absolute;
         font-size: 2rem;
-        top: -2.5rem;
+        top: -3rem;
         color: var(--black);
-        text-shadow: 1px 1px var(--purple);
+        text-shadow: 1px 1px var(--black);
         background-color: var(--white);
         height: 2.5rem;
-        margin: 0.25rem auto;
+        padding: 0.25rem 0.5rem;
+        transition: background-color 0.2s linear;
         // z-index: 9999;
         &::after {
             content: "";
             position: absolute;
             top: 0;
-            right: -2.48rem;
+            right: -2.98rem;
             height: 0;
             border-radius: 0;
             width: 0px;
-            border-left: 2.5rem solid var(--white);
+            border-left: 3rem solid var(--white);
             border-right: none;
-            border-top: 2.5rem solid transparent;
+            border-top: 3rem solid transparent;
+            transition: border-color 0.2s linear;
         }
     }
 
@@ -38,16 +40,24 @@
         overflow: hidden;
         margin-right: 10%;
         border-radius: 8px;
-        border: 3px var(--white) solid;
-        // transition: border-width 0.2s ease-in, height 0.2s ease-in, width 0.2s ease-in;
-        transition-delay: 0.1s;
+        border-top-left-radius: 0;
+        border: 4px var(--white) solid;
+        transition: border-color 0.2s linear;
+        // transition-delay: 0.1s;
         img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 4px ;
-            transform: scale(1);
+            height: auto;
+            // box-shadow: inset 0 0 20px var(--black);
+            transform: scale(1.1);
             transition: transform 0.3s ease-in;
+        }
+        .shadow {
+            position: absolute;
+            top: 4px;
+            right: 4px;
+            height: calc(100% - 12px);
+            width: calc(100% - 8px);
+            box-shadow: inset 0 0 10px 10px var(--black);
         }
         .tags {
             display: flex;
@@ -57,12 +67,9 @@
             position: absolute;
             top: 0.5rem;
             right: -1.5rem;
-            // transform: translateX(50%);
             gap: 0.5em;
             flex-wrap: wrap;
             width: max-content;
-            transition: transform 0.2s ease-in;
-            transition-delay: 0.1s;
             p {
                 padding: 4px 12px;
                 background-color: var(--purple);
@@ -71,7 +78,8 @@
                 margin: 0;
                 width: max-content;
                 color: var(--black);
-                border: 1px var(--white) solid; 
+                border: 2px var(--white) solid; 
+                transition: border-color 0.2s linear;
                 &.web {
                     background-color: var(--blue);
                 }
@@ -149,11 +157,41 @@
         border-width: 7px;
         width: calc(90% - 14px);
         height: calc(100% - 14px);
-        // .tags {
-        //     // transform: translate(50%, 7px);
-        // }
+        .scale-box {
+            border-color: var(--purple);
+        }
+        .title {
+            background-color: var(--purple);
+        }
+        .title:after {
+            border-left-color: var(--purple);
+        }
+        .tags p {
+            border-color: var(--purple);
+        }
         .scale-box img {
-            transform: scale(1.1);
+            transform: scale(1);
+        }
+        .scale-box img.scroll {
+            animation: scrollPage 10s .5s linear infinite;
+            @keyframes scrollPage {
+                0% {
+                    filter: brightness(100%);
+                }   
+                3% {
+                    transform: translateY(0);
+                }
+                90% {
+                    transform: translateY(-350px);
+                }
+                97% {
+                    filter: brightness(100%);
+                }
+                100% {
+                    transform: translateY(-350px);
+                    filter: brightness(0%);
+                }
+            }
         }
     }
     
