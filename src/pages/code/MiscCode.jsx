@@ -1,17 +1,16 @@
 import "../../styles/projectpage.scss";
 import "../../styles/globals.scss";
 
-import Header from "../Header";
-import Footer from "../Footer";
-// import CADMUS from "..././assets/cadmus.png";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
-const Cadmus = () => {
+const MiscCode = () => {
     return (
         <>
             <Header page="code"/>
-            <div className="Cadmus project-page">
+            <div className="MiscCode project-page">
                 <div className="content">
-                    test
+                    <h2>More details coming soon!</h2>
                 </div>
             </div>
             <Footer page="code"/>
@@ -19,4 +18,4 @@ const Cadmus = () => {
     );
 };
 
-export default Cadmus;
+export default MiscCode;

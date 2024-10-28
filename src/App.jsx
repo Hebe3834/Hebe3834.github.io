@@ -6,7 +6,15 @@ import Contact from "./pages/Contact";
 import Crafts from "./pages/Crafts";
 import Background from "./pages/Background";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Cadmus from "./pages/code/Cadmus";
+import CadmusCode from "./pages/code/CadmusCode";
+import LittleVenice from "./pages/code/LittleVeniceCode";
+import MiscCode from "./pages/code/MiscCode";
+import WraplifyCode from "./pages/code/WraplifyCode";
+import BitesDesign from "./pages/designs/BitesDesign";
+import CadmusDesign from "./pages/designs/CadmusDesign";
+import MiscDesign from "./pages/designs/MiscDesign";
+import PersonalDesign from "./pages/designs/PersonalDesign";
+import CreativeSiteCode from "./pages/code/CreativeSite";
 
 function App() {
   return (
@@ -18,9 +26,20 @@ function App() {
       <Routes>
         <Route path="/" element={<About />} />
         <Route path="/crafts" element={<Crafts />} />
-        <Route path="/designs" element={<Designs />} />
+        
         <Route path="/code" element={<Code />} />
-        <Route path="/code/cadmus" element={<Cadmus />} />
+        <Route path="/code/cadmus" element={<CadmusCode />} />
+        <Route path="/code/creativesite" element={<CreativeSiteCode />} />        
+        <Route path="/code/littlevenice" element={<LittleVenice />} />
+        <Route path="/code/misc" element={<MiscCode />} />
+        <Route path="/code/wraplify" element={<WraplifyCode />} />
+        
+        <Route path="/designs" element={<Designs />} />
+        <Route path="/designs/bites" element={<BitesDesign />} />
+        <Route path="/designs/cadmus" element={<CadmusDesign />} />
+        <Route path="/designs/misc" element={<MiscDesign />} />
+        <Route path="/designs/personal" element={<PersonalDesign />} />
+        
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </>

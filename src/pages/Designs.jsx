@@ -1,7 +1,7 @@
 import "../styles/projects.scss";
 import "../styles/globals.scss";
-import Header from "./Header";
-import Footer from "./Footer";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 import DesignBtn from "./components/DesignBtn";
 import PERSONAL from "../assets/personal-site.png";
 import CADMUS from "../assets/cadmus.png";
@@ -22,7 +22,7 @@ const Designs = () => {
                         <DesignBtn
                             id="1" 
                             name="Cadmus"
-                            link="/code/cadmus"
+                            link="/designs/cadmus"
                             img={CADMUS}
                             scroll={true}
                             desc={<p>A <span>public facing site</span> to represent an <span>EMS services startup</span></p>}
@@ -31,7 +31,7 @@ const Designs = () => {
                         <DesignBtn
                             id="2" 
                             name="Personal Site"
-                            link="#"
+                            link="/designs/personal"
                             img={PERSONAL}
                             scroll={true}
                             desc={<p>A <span>personal website</span> for a <span>student developer</span></p>}
@@ -40,7 +40,7 @@ const Designs = () => {
                         <DesignBtn
                             id="3" 
                             name="Bites"
-                            link="#"
+                            link="/designs/bites"
                             img={BITES}
                             scroll={false}
                             desc={<p>A <span>financial literacy app</span> for <span>college students</span></p>}
@@ -49,7 +49,7 @@ const Designs = () => {
                         <DesignBtn
                             id="4" 
                             name="Miscellaneous"
-                            link="#"
+                            link="/designs/misc"
                             img={QUESTIFY}
                             scroll={false}
                             desc={<p>Smaller projects such as stickers, flyers, and hackathon projects</p>}

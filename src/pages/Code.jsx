@@ -1,7 +1,7 @@
 import "../styles/projects.scss";
 import "../styles/globals.scss";
-import Header from "./Header";
-import Footer from "./Footer";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 import PERSONAL from "../assets/personal-site.png";
 import QUARTO from "../assets/quarto.png";
 import CADMUS from "../assets/cadmus.png";
@@ -9,7 +9,6 @@ import WRAPLIFY from "../assets/wraplify.png";
 import VENICE from "../assets/LittleVenice.png";
 import CREATIVE from "../assets/webpages/creative-site-home.png";
 import CodeBtn from "./components/CodeBtn";
-import { useNavigate } from 'react-router-dom';
 
 const Code = () => {  
   return (
@@ -48,7 +47,8 @@ const Code = () => {
             <CodeBtn 
               id="2" 
               name="Wraplify"
-              link="https://sites.google.com/view/wraplify-portfolio/"
+              link="/code/wraplify"
+              // link="https://sites.google.com/view/wraplify-portfolio/"
               img={WRAPLIFY}
               scroll={true}
               desc={<p>An <span> Androdid app</span> that presents <span>listening insights</span> from <span>Spotify</span></p>}
@@ -62,7 +62,8 @@ const Code = () => {
             <CodeBtn 
               id="3" 
               name="Little Venice"
-              link="https://littlevenicerestaurant.com/"
+              link="/code/littlevenice"
+              // link="https://littlevenicerestaurant.com/"
               img={VENICE}
               scroll={true}
               desc={<p>An <span>online face</span> for a <span>family owned restaurant</span></p>}
@@ -76,11 +77,21 @@ const Code = () => {
             <CodeBtn 
               id="4" 
               name="Creative Team Site"
-              link="/code/creative-team"
+              link="/code/creativesite"
               img={CREATIVE}
               scroll={true}
               desc={<p>A <span>public facing site</span> for a <span>printing and apparel business</span></p>}
               tags={["React", "SCSS"]}
+            />
+
+            <CodeBtn 
+              id="5" 
+              name="Miscellaneous"
+              link="/code/misc"
+              img={QUARTO}
+              scroll={true}
+              desc={<p>Smaller projects</p>}
+              tags={[]}
             />
 
             

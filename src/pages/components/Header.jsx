@@ -1,8 +1,8 @@
-import "../styles/header.scss";
-import "../styles/globals.scss";
+import "../../styles/header.scss";
+import "../../styles/globals.scss";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import HB from "../assets/butterfly.png";
+import HB from "../../assets/butterfly.png";
 
 const Header = (props) => {
 
