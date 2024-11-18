@@ -21,19 +21,21 @@
         position: absolute;
         top: 0;
         left: 0;
-        animation-name: float0;
-        animation-duration: 30s;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
+        // animation-name: float0;
+        // animation-duration: 30s;
+        // animation-iteration-count: infinite;
+        // animation-timing-function: linear;
+        transform: translate(10vw, 20vh)
     }
     .blob1 {
         position: absolute;
         bottom: 0;
         right: 0;
-        animation-name: float1;
-        animation-duration: 20s;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
+        // animation-name: float1;
+        // animation-duration: 20s;
+        // animation-iteration-count: infinite;
+        // animation-timing-function: linear;
+        transform: translate(20vw, 20vh)
     }
     .blur {
         background-color: rgba(13, 14, 14, 0.20);
