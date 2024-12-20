@@ -8,8 +8,17 @@ import CADMUS from "../assets/cadmus.png";
 import RAFI from "../assets/rafi_mockup.png";
 import QUESTIFY from "../assets/questify.png";
 import BITES from "../assets/bites.png";
+import { useEffect } from "react";
 
 const Designs = () => {
+    useEffect(() => {
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+    });
+    }, []);
+    
     return (
         <>
             <Header page="designs" />

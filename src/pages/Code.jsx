@@ -9,8 +9,17 @@ import WRAPLIFY from "../assets/wraplify.png";
 import VENICE from "../assets/LittleVenice.png";
 import CREATIVE from "../assets/webpages/creative-site-home.png";
 import CodeBtn from "./components/CodeBtn";
+import { useEffect } from "react";
 
-const Code = () => {  
+const Code = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+  }, []);
+  
   return (
     <>
       <Header page="code" />
@@ -37,12 +46,8 @@ const Code = () => {
               img={PERSONAL}
               scroll={true}
               desc={<p>A <span>personal website</span> for a <span>student developer</span></p>}
+              tags={["React", "SCSS", "Firebase"]}
             /> */}
-            {/* <div className="tags">
-                  <p className="lang">React</p>
-                  <p className="web">SCSS</p>
-                  <p className="db">Firebase</p>
-                </div> */}
 
             <CodeBtn 
               id="2" 
@@ -52,12 +57,8 @@ const Code = () => {
               img={WRAPLIFY}
               scroll={true}
               desc={<p>An <span> Androdid app</span> that presents <span>listening insights</span> from <span>Spotify</span></p>}
-              tags={["Android\nStudio", "Spotify API"]}
+              tags={["Android\nStudio", "Spotify API", "Firebase"]}
             />
-            {/* <div className="tags">
-                  <p className="lang">Android Studio</p>
-                  <p className="db">Firebase</p>
-                </div> */}
 
             <CodeBtn 
               id="3" 
@@ -69,12 +70,8 @@ const Code = () => {
               desc={<p>An <span>online face</span> for a <span>family owned restaurant</span></p>}
               tags={["React", "SCSS"]}
             />
-            {/* <div className="tags">
-                  <p className="lang">React</p>
-                  <p className="lang">SASS</p>
-                </div> */}
 
-            <CodeBtn 
+            {/* <CodeBtn 
               id="4" 
               name="Creative Team Site"
               link="/code/creativesite"
@@ -82,7 +79,7 @@ const Code = () => {
               scroll={true}
               desc={<p>A <span>public facing site</span> for a <span>printing and apparel business</span></p>}
               tags={["React", "SCSS"]}
-            />
+            /> */}
 
             <CodeBtn 
               id="5" 
@@ -90,13 +87,11 @@ const Code = () => {
               link="/code/misc"
               img={QUARTO}
               scroll={true}
-              desc={<p>Smaller projects</p>}
+              desc={<p><span>Smaller projects</span></p>}
               tags={[]}
             />
 
             
-
-
           </div>
 
         </div>

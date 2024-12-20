@@ -3,8 +3,17 @@ import "../styles/globals.scss";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 export default function About() {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+  }, []);
+
   return (
     <>
       <Header page="about" />

@@ -28,6 +28,15 @@ initializeApp(firebaseConfig);
 const db = getFirestore();
 
 const Crafts = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+  }, []);
+
+  
   const [crafts, setCrafts] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -80,7 +89,7 @@ const Crafts = () => {
                 crafts.map((craft, index) => {
                   return (
                     <div className="craft" key={index}>
-                      <img src={craft.url} alt={craft.name} />
+                      <img src={craft.compress_url} alt={craft.name} />
                       <div className="filter">
                         <div className="name">{craft.name}</div>
                       </div>

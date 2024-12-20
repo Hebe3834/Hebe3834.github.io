@@ -2,9 +2,18 @@ import "../styles/contact.scss";
 import "../styles/globals.scss";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Contact = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+  }, []);
+  
+  
   const [success, setSuccess] = useState('');
   const [sending, setSending] = useState(false);
 
