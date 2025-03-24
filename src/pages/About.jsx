@@ -5,6 +5,12 @@ import Footer from "./components/Footer";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 
+import DesignBtn from "./components/DesignBtn";
+import GUTINSTINCT from "../assets/gutinstinct.png";
+import CADMUS from "../assets/cadmus.png";
+import "../styles/projects.scss";
+
+
 export default function About() {
   useEffect(() => {
     window.scrollTo({
@@ -44,6 +50,30 @@ export default function About() {
               <i className="fa-solid fa-graduation-cap"></i>
               <p>Currently studying CS @ Georgia Institute of Technology</p>
             </div>
+          </div>
+
+          <div className="Projects Designs">
+          <h2>Featured Projects</h2>
+            <div className="projects-grid flex flex-row flex-wrap gap-10 my-15">
+              <DesignBtn
+                id="1" 
+                name="Gut Instinct"
+                link="/designs/gutinstinct"
+                img={GUTINSTINCT}
+                scroll={false}
+                className="w-28"
+                desc={<p>A <span>mobile app</span> addressing the frustrations of <span>college students</span> with <span>dietary restrictions</span></p>}
+                />
+                <DesignBtn
+                  id="1" 
+                  name="Cadmus"
+                  link="/designs/cadmus"
+                  img={CADMUS}
+                  scroll={true}
+                  className="w-28"
+                  desc={<p>A <span>public facing site</span> to represent an <span>EMS services startup</span></p>}
+                  />
+              </div>
           </div>
 
           <div className="work-section">

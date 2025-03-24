@@ -8,6 +8,7 @@ import CADMUS from "../assets/cadmus.png";
 import RAFI from "../assets/rafi_mockup.png";
 import QUESTIFY from "../assets/questify.png";
 import BITES from "../assets/bites.png";
+import GUTINSTINCT from "../assets/gutinstinct.png";
 import { useEffect } from "react";
 
 const Designs = () => {
@@ -27,6 +28,15 @@ const Designs = () => {
 
                     <h1>Design Work</h1>
                     <div className="projects-grid">
+
+                        <DesignBtn
+                            id="1" 
+                            name="Gut Instinct"
+                            link="/designs/gutinstinct"
+                            img={GUTINSTINCT}
+                            scroll={false}
+                            desc={<p>A <span>mobile app</span> addressing the frustrations of <span>college students</span> with <span>dietary restrictions</span></p>}
+                            />
 
                         <DesignBtn
                             id="1" 

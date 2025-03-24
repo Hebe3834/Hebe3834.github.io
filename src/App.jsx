@@ -10,6 +10,7 @@ import CadmusCode from "./pages/code/CadmusCode";
 import LittleVenice from "./pages/code/LittleVeniceCode";
 import MiscCode from "./pages/code/MiscCode";
 import WraplifyCode from "./pages/code/WraplifyCode";
+import GutInstinct from "./pages/designs/GutInstinct";
 import BitesDesign from "./pages/designs/BitesDesign";
 import CadmusDesign from "./pages/designs/CadmusDesign";
 import MiscDesign from "./pages/designs/MiscDesign";
@@ -35,6 +36,7 @@ function App() {
         <Route path="/code/wraplify" element={<WraplifyCode />} />
         
         <Route path="/designs" element={<Designs />} />
+        <Route path="/designs/gutinstinct" element={<GutInstinct />} />
         <Route path="/designs/bites" element={<BitesDesign />} />
         <Route path="/designs/cadmus" element={<CadmusDesign />} />
         <Route path="/designs/misc" element={<MiscDesign />} />
