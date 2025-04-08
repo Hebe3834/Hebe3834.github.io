@@ -11,11 +11,10 @@
     .title {
         position: absolute;
         font-size: 2rem;
-        top: -3rem;
+        top: calc(-3rem + 1px);
         color: var(--black);
         text-shadow: 1px 1px var(--black);
         background-color: var(--white);
-        height: 2.5rem;
         padding: 0.25rem 0.5rem;
         transition: background-color 0.2s linear;
         // z-index: 9999;
@@ -125,7 +124,7 @@
             position: absolute;
             top: 0;
             left: -1.98em;
-            height: calc(100% - 2em);
+            height: 100%;
             border-radius: 0;
             width: 0px;
             border-right: 2em solid var(--purple);
@@ -137,7 +136,7 @@
             position: absolute;
             top: 0;
             right: -1.98em;
-            height: calc(100% - 2em);
+            height: 100%;
             border-radius: 0;
             width: 0px;
             border-left: 2em solid var(--purple);
@@ -154,8 +153,7 @@
     }
     &:hover {
         backdrop-filter: none;
-        border-width: 7px;
-        width: calc(90% - 14px);
+        width: calc(90% - 14px);    
         height: calc(100% - 14px);
         .scale-box {
             border-color: var(--purple);
@@ -173,7 +171,7 @@
             transform: scale(1);
         }
         .scale-box img.scroll {
-            animation: scrollPage 10s .5s linear infinite;
+            animation: scrollPage 5s .25s linear infinite;
             @keyframes scrollPage {
                 0% {
                     filter: brightness(100%);

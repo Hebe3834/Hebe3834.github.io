@@ -50,12 +50,12 @@
     }
     h3 {
         position: absolute;
-        top: -0.75em;
+        top: -0.9em;
         left: 0;      
         color: var(--purple);
         height: 0em;
         padding-left: 5px;
-        text-shadow: 1px 2px 1px var(--white);
+        text-shadow: 1px 2px 10px var(--white);
         overflow: hidden;
         transition: height 0.3s ease-in;
     }

@@ -86,7 +86,7 @@ const Code = () => {
               name="Miscellaneous"
               link="/code/misc"
               img={QUARTO}
-              scroll={true}
+              scroll={false}
               desc={<p><span>Smaller projects</span></p>}
               tags={[]}
             />

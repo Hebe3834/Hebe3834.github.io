@@ -13,7 +13,7 @@ const DesignBtn = (props) => {
                 </div>
                 <div className="blur"></div>
                 {props.desc}
-                <h3>{props.name}</h3>
+                <h3 className="font-semibold">{props.name}</h3>
             </a>
         </>
     )
