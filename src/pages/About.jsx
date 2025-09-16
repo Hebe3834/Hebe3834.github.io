@@ -41,7 +41,7 @@ export default function About() {
               </a>
             </div>
           </div>
-          <div className="desc">
+          <h2 className="desc">
             <p>
               <span>I'm here to design and program meaningful experiences.</span>
               <span>Welcome to my page!</span>
@@ -50,7 +50,7 @@ export default function About() {
               <i className="fa-solid fa-graduation-cap"></i>
               <p>Currently studying CS @ Georgia Institute of Technology</p>
             </div>
-          </div>
+          </h2>
 
           <div className="Projects Designs">
           <h2>Featured Projects</h2>

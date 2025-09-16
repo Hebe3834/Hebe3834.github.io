@@ -9,7 +9,7 @@ const DesignBtn = (props) => {
         <>
             <a className="design-btn" onClick={async () => navigate(props.link)}>
                 <div className="scale-box">
-                    <img src={props.img} alt={"Design " + props.id} className={props.scroll ? "scroll" : ""}/>
+                    <img src={props.img} alt={props.name + " (Design Project)"} className={props.scroll ? "scroll" : ""}/>
                 </div>
                 <div className="blur"></div>
                 {props.desc}

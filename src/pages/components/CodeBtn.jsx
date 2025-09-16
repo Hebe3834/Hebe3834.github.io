@@ -10,7 +10,7 @@ const CodeBtn = (props) => {
             <a className="codeBtn" onClick={async () => navigate(props.link)}>
                 <h3 className="title">{props.name}</h3>
                 <div className="scale-box">
-                    <img src={props.img} alt={"Project " + props.id} className={props.scroll ? "scroll" : ""}/>
+                    <img src={props.img} alt={props.name + " (Coding Project)"} className={props.scroll ? "scroll" : ""}/>
                     <div className="tags">
                         {props.tags.map((tag) => {
                             // if (tag === "React") {
